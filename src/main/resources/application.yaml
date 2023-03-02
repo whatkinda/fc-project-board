@@ -1,0 +1,36 @@
+debug: false
+management.endpoints.web.exposure.include: "*"
+
+logging:
+  level:
+    com.fastcampus.projectboard: debug
+    org.springframework.web.servlet: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/board
+    username: jhseo
+    password: jhseo0402
+    driver-class-name:
+  jpa:
+    defer-datasource-initialization: true
+    hibernate.ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+      hibernate.default_batch_fetch_size: 100
+    h2.console.enabled: true
+    sql.init.mode: always
+
+---
+
+# properties about 'h2 compatibility mode'
+#spring:
+#  config.activate.on-profile: testdb
+#  datasource:
+#    url: jdbc:h2:mem:board;mode=mysql
+#    driverClassName: org.h2.Driver
+#  sql.init.mode: always
+#  # @AutoConfigureTestDatabase 는 특정 테스트 클래스에만 적용할 때. 전역적용은 아래 property
+#  test.database.replace: none
