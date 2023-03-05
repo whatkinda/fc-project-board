@@ -55,7 +55,7 @@ public class DataRestTest {
         // given
 
         // when & then
-        mvc.perform(get("/api/articleComments"))
+        mvc.perform(get("/api/articles/1/articleComments"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.valueOf("application/hal+json")));
     }
