@@ -13,9 +13,6 @@ spring:
     username: jhseo
     password: jhseo0402
     driver-class-name: com.mysql.cj.jdbc.Driver
-#     url: jdbc:h2:mem:testdb
-#     username: sa
-#     driver-class-name: org.h2.Driver
   jpa:
     defer-datasource-initialization: true
     hibernate.ddl-auto: create
@@ -23,17 +20,7 @@ spring:
     properties:
       hibernate.format_sql: true
       hibernate.default_batch_fetch_size: 100
-#    h2.console.enabled: true
-    sql.init.mode: always
-
----
-
-# properties about 'h2 compatibility mode'
-#spring:
-#  config.activate.on-profile: testdb
-#  datasource:
-#    url: jdbc:h2:mem:board;mode=mysql
-#    driverClassName: org.h2.Driver
-#  sql.init.mode: always
-#  # @AutoConfigureTestDatabase 는 특정 테스트 클래스에만 적용할 때. 전역적용은 아래 property
-#  test.database.replace: none
+  sql.init.mode: always
+  data.rest:
+    base-path: /api
+    detection-strategy: annotated
