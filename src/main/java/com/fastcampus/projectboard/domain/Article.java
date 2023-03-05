@@ -43,7 +43,7 @@ public class Article extends AuditingFields {
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
     private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
 
-    
+
     // 기본생성자는 평소엔 오픈하지 않을거기에 protected 접근제어자 가짐
     protected Article() {}
 
