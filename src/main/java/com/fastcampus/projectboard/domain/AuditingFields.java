@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 @ToString
 @EntityListeners(AuditingEntityListener.class)  // 이게 있어야 auditing이 동작함
 @MappedSuperclass
-public class AuditingFields {
+public abstract class AuditingFields {
     // jpa auto auditing
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
