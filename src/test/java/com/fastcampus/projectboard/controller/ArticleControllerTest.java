@@ -224,11 +224,10 @@ class ArticleControllerTest {
 
     private UserAccountDto createUserAccountDto() {
         return UserAccountDto.of(
-                1L,
                 "jh",
                 "pw",
-                "jh@gmail.com",
-                "jh",
+                "jh@mail.com",
+                "Jh",
                 "memo",
                 LocalDateTime.now(),
                 "jh",
