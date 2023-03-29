@@ -35,6 +35,7 @@ dependencies {
 	// 사용자 custom properties도 문서 세팅이 가능해지고, IDE 지원 받게 됨
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
 
 	// queryDSL 설정
 	implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
